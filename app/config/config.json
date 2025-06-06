@@ -1,0 +1,247 @@
+{
+
+
+
+  "setting_widget":{
+
+    "map":{
+      "background_type": "mean amplitude",  // "Amplitude" | "Temp. Coh." | "None"
+      "background_amplitude_ind": 0,
+      "background_amplitude_n_average": 0,
+      "background_cmap": "gray",
+      "equal_aspect": true,
+      "background_label": false,
+
+      "background_stretch": {
+              "amplitude": "100%",
+              "mean amplitude": "100%",
+              "temporal coherence": "100%",
+              "amplitude dispersion": "100%"
+      },
+
+
+
+
+      "left_click_marker_size": 50,
+      "right_click_marker_size": 50,
+      "hover_marker_size": 100,
+
+      "vel_unit": "mm/yr",     // "mm/yr" | "cm/yr" | "m/yr"
+
+      "p1_marker_size": 5,
+      "p1_marker": "s",
+      "p1_marker_face_color": "white",
+      "p1_marker_edge_color": "white",
+      "p1_marker_alpha": 0.5,
+
+      "p2_plot_type": "velocity",    // "velocity" | "coherence" | "demerr" | "None"
+      "p2_plot_cmap": "jet_r",
+      "p2_marker_size": 5,
+
+      "snap_to_p1": false,
+      "snap_to_p2": true,
+
+
+      "plot_hover": false,
+      "plot_hold": false,
+      "point_list_type": "range_azimuth",  // "id" | "range_azimuth" | "lat_lon"
+      "mpl_toolbar_height": 10,
+
+
+    },
+
+    "timeseries":{
+      "plot_enable": true,
+
+
+      // "plot_keep": ,
+      "fit_models": ["poly-1", "poly-2"],  // must be a list []. ["poly-1","poly-2","poly-3","exp","seasonal"]
+      "fit_line_type": "--",
+      "fit_seasonal": true,
+      "remove_topo_error": true,
+      "replicate_ts_plot": true,
+      "mpl_toolbar_height": 10,
+      "x_tick_direction": "in",
+      "y_tick_direction": "in",
+      "unit": "cm",
+      "ts_marker": "o",
+      "ts_marker_size": 5,
+      "replicate_marker": "o",
+      "replicate_marker_size": 2,
+      "replicate_marker_color": "black",
+    },
+
+    //
+    "temporal_unwrap_plot":{
+      "plot_enable": false,
+      "mpl_toolbar_height": 10,
+      "x_tick_direction": "in",
+      "y_tick_direction": "in",
+      "unit": "cm",
+      "ts_marker": "o",
+      "ts_marker_size": 2,
+      "plot_phase_label": true,
+      "font_size": 8,
+      "scatter_marker_size": 5,
+      "scatter_cmap": "jet_r",
+      "scatter_alpha": 0.5,
+      "scatter_marker": ".",
+      "scatter_edge_color": "black",
+      "scatter_edge_line_width": 0.5,
+      "scatter_temporal_x_label": "Temp. Base.",
+      "scatter_perpendicular_x_label": "$\\perp$ Base. [m]'",
+      
+      "scatter_label_loc_h": "left",
+      "scatter_label_loc_v": "top",
+      "search_space_cmap": "gray",
+      "search_space_x_label": "DEM error (m)",
+      "search_space_y_label": "Velocity (cm/a)",
+      "search_space_optimum_marker": "o",
+      "search_space_optimum_face_color": "white",
+      "search_space_optimum_edge_color": "black",
+      "search_space_optimum_marker_size": 5,
+      "search_space_click_marker": "s",
+      "search_space_click_face_color": "black",
+      "search_space_click_edge_color": "white",
+      "search_space_click_marker_size": 2,
+
+      "demerr_bound_sync": true,
+      "velocity_bound_sync": true,
+      "window_size_sync": true,
+    },
+
+    "temporal_unwrap":{
+
+
+      "reference_type": "arc", // "arc" or "window"
+      "window_size_azimuth": 7,
+      "window_size_range": 7,
+      "demerr_bound_min": -150,   // in m
+      "demerr_bound_max": 150,    // in m
+      "demerr_num_samples": 150,
+      "velocity_bound_min": -0.05,   // CAUTION: in m
+      "velocity_bound_max": 0.05,    // CAUTION: in m
+      "velocity_num_samples": 150,
+      "remove_seasonal_before_temp_uw": false,
+      "remove_seasonal_after_temp_uw": false,
+
+      
+      
+      
+
+
+
+    },
+
+    // network parameters
+    "network":{
+      "network_type": "star", // sbas, star, ifg_stack
+      "ref_index": 0,         // should be smaller than the number of images
+
+      "plot_enable": false,
+      "mpl_toolbar_height": 10,
+      "network_marker": "o",
+      "network_marker_size": 3,
+      "network_marker_color": "black",
+      "network_line_color": "gray",
+      "network_line_width": 0.2,
+      "network_line_style": "-",
+      "network_y_label": "",
+      "network_x_label": "",
+      "hist_bins": 100,
+      "hist_temporal_x_label": "",
+      "hist_temporal_y_label": "",
+      "hist_perpendicular_x_label": "",
+      "hist_perpendicular_y_label": "",
+      "x_tick_direction": "",
+      "y_tick_direction": "",
+
+      // selected date
+      "selected_date_marker": 'o',
+      "selected_date_markersize": 5,
+      "selected_date_markerfacecolor": 'red',
+      "selected_date_markeredgecolor": 'black',
+      "selected_date_alpha": 0.5,
+
+      //
+
+    }
+  },
+
+
+
+    "main_plot":{
+    "clicked_point":{
+      "line_style": "-",
+      "line_width": 1
+    },
+    "left_click_point":{
+      "facecolor": "none",
+      "edgecolor": "black",
+      "alpha": 1,
+      "marker": "o",
+      "marker_size": 5,
+      "edge_width": 1
+    },
+    "right_click_point":{
+      "facecolor": "none",
+      "edgecolor": "black",
+      "alpha": 1,
+      "marker": "*",
+      "marker_size": 5,
+      "edge_width": 1
+    },
+    "hover_point":{
+      "facecolor": "white",
+      "edgecolor": "black",
+      "alpha": 0.9,
+      "marker": "^",
+      "marker_size": 5,
+      "edge_width": 0.1
+    },
+    "p2":{
+      "marker_size": 5,
+      "color": "white"
+    },
+    "cbar":{
+      "pad": 0.01,
+      "aspect": 30,
+      "shrink": 0.5,
+      "orientation": "horizontal",
+      "location": "top",
+      "ticks":{
+        "direction": "in",
+        "labelsize": "small",
+        "length": 6
+      },
+      "label":{
+        "x": -0.2,
+        "y": 1.05,
+        "va": "bottom",
+        "ha": "left",
+        "rotation": 0
+      }
+      },
+    "units":{
+      "vel_unit": "cm/yr"
+    }
+  },
+
+
+
+
+  "data":{
+    "processor": "sarvey",
+    "P1_FILE_DEFAULT": "p1_ifg_wr.h5",
+    "AMPLITUDE_FILE_DEFAULT": "background_map.h5",
+    "TEMPORAL_COHERENCE_FILE_DEFAULT": "temporal_coherence.h5",
+    "TEMPORAL_COHERENCE_DATASET_NAME_DEFAULT": "temp_coh",
+    "P2_FILES_DEFAULT": "coh*_ts.h5",
+    "IFG_NETWORK_FILE_DEFAULT": "ifg_network.h5",
+    "SLC_STACK_FILE": "inputs/slcStack.h5",
+    "IFG_STACK_FILE": "ifg_stack.h5",
+    "GEOMETRY_RADAR_FILE": "inputs/geometryRadar.h5"
+  }
+
+
+}
